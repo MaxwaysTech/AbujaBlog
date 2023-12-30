@@ -14,7 +14,8 @@ from form import CreatePost, CommentForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///posts.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://myblog_ijxj_user:AWAnS3scB9bXMifDYAgIBzGmTxXvMEd9@dpg" \
+                                        "-cm6kbvud3nmc73cdu9sg-a/myblog_ijxj", "sqlite:///posts.db"
 db = SQLAlchemy()
 db.init_app(app)
 
